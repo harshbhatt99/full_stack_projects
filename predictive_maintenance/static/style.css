@@ -1,0 +1,75 @@
+/* Add these styles to your existing CSS */
+
+/* Style the header */
+header {
+    background-color: #f0f0f0; /* Add background color */
+    padding: 20px; /* Add padding */
+}
+
+/* Style the form */
+form {
+    padding: 20px; /* Add padding */
+    background-color: #f9f9f9; /* Add background color */
+    border-radius: 5px; /* Add border radius */
+    margin-top: 20px; /* Add margin at the top */
+}
+
+/* Style the form labels */
+form label {
+    display: block; /* Display block to put each label on a new line */
+    margin-bottom: 5px; /* Add margin at the bottom */
+}
+
+/* Style the form inputs */
+form input[type="text"] {
+    width: 100%; /* Make inputs fill the width of their container */
+    padding: 10px; /* Add padding */
+    margin-bottom: 10px; /* Add margin at the bottom */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 5px; /* Add border radius */
+}
+
+/* Style the submit button */
+form input[type="submit"] {
+    width: 100%; /* Make button fill the width of its container */
+    padding: 10px; /* Add padding */
+    background-color: #007bff; /* Add background color */
+    color: white; /* Add text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border radius */
+    cursor: pointer; /* Add pointer cursor */
+    transition: background-color 0.3s; /* Add transition for smoother hover effect */
+}
+
+/* Add hover effect to submit button */
+form input[type="submit"]:hover {
+    background-color: #0056b3; /* Darken background color on hover */
+}
+
+
+/* Style the dropdown */
+form select {
+    width: 100%; /* Make the dropdown fill the width of its container */
+    padding: 10px; /* Add padding */
+    margin-bottom: 10px; /* Add margin at the bottom */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 5px; /* Add border radius */
+    background-color: #fff; /* Add background color */
+    font-size: 15px; /* Set font size */
+    cursor: pointer; /* Add pointer cursor */
+}
+
+/* Style the dropdown arrow */
+form select::-ms-expand {
+    display: none; /* Hide the default arrow in IE */
+}
+
+/* Style the dropdown arrow for other browsers */
+form select::after {
+    content: '\25BC'; /* Unicode character for down arrow */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none; /* Prevent the arrow from being clickable */
+}

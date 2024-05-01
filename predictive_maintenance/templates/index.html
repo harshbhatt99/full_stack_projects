@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        <h1><center>Mechenance - Predictive Maintenance & Sustainable Manufacturing Dashboard</center></h1>
+        <h3>Provide the values (Manual)</h3>
+        <form action='/predict' method="POST" enctype="multipart/form-data">
+            <label for="air_temp">Air Temperature:</label>
+            <input type="text" id="air_temp" name="air_temp" required><br><br>
+            
+            <label for="process_temp">Process Temperature:</label>
+            <input type="text" id="process_temp" name="process_temp" required><br><br>
+            
+            <label for="rotational_speed">Rotational Speed (RPM):</label>
+            <input type="text" id="rotational_speed" name="rotational_speed" required><br><br>
+            
+            <label for="air_temp">Torque (N-m):</label>
+            <input type="text" id="torque" name="torque" required><br><br>
+            
+            <label for="tool_wear">Tool Wear (Mins):</label>
+            <input type="text" id="tool_wear" name="tool_wear" required><br><br>
+
+            <label for="energy_source">Energy Source:</label>
+            <select id="energy_source" name="energy_source" required>
+                <option value="Natural Gas">Natural Gas</option>
+                <option value="Diesel">Diesel</option>
+                <option value="Grid Electricity">Grid Electricity</option>
+            </select><br><br>
+                        
+            <input type="submit" value="Calculate">
+        </form>
+    </body>
+</html>

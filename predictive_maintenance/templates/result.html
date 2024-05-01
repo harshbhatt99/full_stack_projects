@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <link rel="stylesheet" href="/static/style.css">
+
+    </head>
+    <body>
+        <h1><center>Mechenance - Predictive Maintenance & Sustainable Manufacturing Dashboard</center></h1>
+        <center>
+        <h4>(Manual)</h4>
+        <hr> <!-- This will create a horizontal line -->
+        <h3>Air Temp: {{ air_temp }}
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            Process Temp: {{ process_temp }}
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            Rotational Speed: {{ rotational_speed }}
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            Tool Wear: {{ tool_wear }}
+        </h3>
+        <hr> <!-- This will create a horizontal line -->
+        
+        <h3>Predicted Failure Type: {{ prediction_type }}
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            Confidence Level: {{ confidence_level }} %
+        </h3>
+        <hr> <!-- This will create a horizontal line -->
+
+        <h3>Carbon Intensity: {{ carbon_intensity }} kgCO2/kWh
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            Carbon Footprint: {{ carbon_footprint }} kgCO2
+        </h3>
+        </center>
+        <hr> <!-- This will create a horizontal line -->
+        <div id="plot"></div>
+        <script>
+            var plotData = { graphJSON: {{ graphJSON|safe }} };
+            Plotly.newPlot('plot', plotData.graphJSON);
+        </script>
+    </body>
+</html>
